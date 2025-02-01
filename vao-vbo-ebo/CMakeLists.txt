@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.29)
-project(buffers)
+set(EXECUTABLE_NAME "buffers_1")
 
-set(EXECUTABLE_NAME "buffers")
+project(${EXECUTABLE_NAME})
+
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -10,7 +11,7 @@ include_directories(${CMAKE_SOURCE_DIR}/../ExternalSource/include)
 
 add_executable(
     ${EXECUTABLE_NAME}
-    src/main.cpp
+    src/${EXECUTABLE_NAME}.cpp
     ${CMAKE_SOURCE_DIR}/../ExternalSource/glad.c
 )
 
